@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tools dự đoán kết quả 🤖</title>
+  <!-- Link Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Màn hình đăng nhập -->
+    <section id="login-screen" class="screen active">
+      <div class="container">
+        <h1>🔒 Đăng Nhập</h1>
+        <input type="password" id="password-input" placeholder="Nhập mật khẩu" />
+        <button id="login-button">Xác Nhận</button>
+        <button id="exit-button">Thoát</button>
+        <p id="login-error" class="error-message">🔒 KEY không chính xác!</p>
+      </div>
+    </section>
+
+    <!-- Màn hình chào mừng -->
+    <section id="welcome-screen" class="screen">
+      <div class="container">
+        <h1>✨ Tool By Nhayy</h1>
+        <p>Xin chào bạn! Hôm nay tôi sẽ giúp bạn về bờ nhé 🤝!</p>
+        <button id="proceed-button">Tôi Kì Vọng Vào Bạn ??</button>
+      </div>
+    </section>
+
+    <!-- Màn hình nhập vốn -->
+    <section id="capital-screen" class="screen">
+      <div class="container">
+        <h1>💰 Nhập Số Tiền Vốn</h1>
+        <input type="text" id="capital-input" placeholder="Vd: 500k" />
+        <button id="capital-confirm-button">Xác Nhận</button>
+        <button id="capital-exit-button">Thoát</button>
+        <p id="capital-error" class="error-message">Số tiền không hợp lệ.</p>
+      </div>
+    </section>
+
+    <!-- Màn hình menu chính -->
+    <section id="menu-screen" class="screen">
+      <div class="container">
+        <h1>🎮 Chọn Trò Chơi</h1>
+        <button class="game-button" data-game="Hit.Club">Hit.Club</button>
+        <button id="menu-exit-button">Thoát</button>
+      </div>
+    </section>
+
+    <!-- Màn hình nhập kết quả xúc sắc -->
+    <section id="dice-screen" class="screen">
+      <div class="container">
+        <h1>🎲 Nhập Kết Quả 3 Xúc Sắc</h1>
+        <input type="text" id="dice-input" placeholder="Vd: 5-6-1" />
+        <button id="dice-confirm-button">Xác Nhận</button>
+        <button id="dice-exit-button">Thoát</button>
+        <p id="dice-error" class="error-message">Vui lòng nhập 3 số từ 1 đến 6, cách nhau bằng dấu '-'. Vd: 5-6-1</p>
+      </div>
+    </section>
+
+    <!-- Màn hình kết quả -->
+    <section id="result-screen" class="screen">
+      <div class="container">
+        <h1>📈 Kết Quả Soi Cầu Hit.Club</h1>
+        <p id="result-message"></p>
+        <button id="result-keep-button">Liếm</button>
+        <button id="result-broke-button">Gãy</button>
+      </div>
+    </section>
+
+    <!-- Màn hình hiển thị số vốn -->
+    <section id="capital-display-screen" class="screen">
+      <div class="container">
+        <h1>💸 Số Tiền Còn Lại</h1>
+        <p id="capital-display-message"></p>
+        <button id="withdraw-button">Rút tiền</button>
+        <button id="continue-button">Đọc tiếp</button>
+        <button id="capital-exit-main-button">Thoát</button>
+      </div>
+    </section>
+
+    <!-- Màn hình thông báo rút tiền thành công -->
+    <section id="success-screen" class="screen">
+      <div class="container">
+        <h1>🚀 Xin ít lộc Nhé</h1>
+        <p>STK:0348319495 MB!!! 😳</p>
+        <button id="success-ok-button">Ok Nè ✨</button>
+      </div>
+    </section>
+
+    <!-- Màn hình liên hệ khi nhập sai mật khẩu quá 2 lần -->
+    <section id="contact-screen" class="screen">
+      <div class="container">
+        <h1>⚠️ Bạn đã nhập sai mật khẩu quá 2 lần!</h1>
+        <p>Vui lòng liên hệ để được hỗ trợ.</p>
+        <button id="contact-button">Liên hệ</button>
+        <button id="retry-button">Thử lại</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Âm thanh cho nút -->
+  <audio id="click-sound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3" preload="auto"></audio>
+
+  <!-- Link JavaScript -->
+  <script src="scripts.js"></script>
+</body>
+</html>

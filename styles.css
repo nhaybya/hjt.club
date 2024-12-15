@@ -1,0 +1,130 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Áp dụng font Roboto Mono */
+body {
+  font-family: 'Roboto Mono', monospace;
+  background-color: #0d0d0d;
+  color: #00ff00;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Ẩn tất cả các màn hình trừ màn hình hiện tại */
+.screen {
+  display: none;
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  animation: fadeIn 0.5s forwards;
+}
+
+.screen.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.5s forwards;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slideIn 0.5s forwards;
+}
+
+/* Tiêu đề */
+h1 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  text-align: center;
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00;
+  animation: flicker 1.5s infinite;
+}
+
+/* Đoạn văn bản */
+p {
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.5;
+  animation: fadeInText 2s forwards;
+}
+
+/* Các nút */
+button {
+  background-color: #004400;
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  padding: 10px 20px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.75s ease;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+}
+
+button:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+}
+
+button:hover {
+  background-color: #006600;
+  transform: scale(1.05);
+}
+
+/* Các nút đặc biệt */
+.game-button {
+  background-color: #002200;
+}
+
+.game-button:hover {
+  background-color: #004400;
+}
+
+/* Các ô nhập liệu */
+input[type="password"], input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #00ff00;
+  border-radius: 5px;
+  background-color: #1a1a1a;
+  color: #00ff00;
+  font-size: 1em;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input[type="password"]:focus, input[type="text"]:focus {
+  border:
+	
